@@ -1,0 +1,177 @@
+:root{
+    --main-font:'Roboto Condensed', sans-serif;
+    --btn-color :#AEBDCA;
+    --btn-hov :#7895B2;
+    --bg-color:#3F2E3E;
+    --s-color:#FF9800;
+    --Tr :0.5s;
+    /* --animate-duration: 3000ms;
+    --animate-delay: 0.9s; */
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    transition: var(--Tr);
+    padding: 0;
+}
+/* Body */
+body{
+    background: #555;
+    height: 100vh;
+    font-family: var(--main-font);
+}
+
+
+/* Start container */
+.contaier{
+    max-width: 400px;
+    height: 80%;
+    margin: auto;
+    border-radius: 3px;
+    overflow: hidden;
+    position: relative;
+    top: 10%;
+}
+
+
+
+/* form part */
+.form-part{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background: #313131;
+    padding: 10px;
+
+}
+.form-part header{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    gap: 10px;
+    color: #fff;
+}
+.form-part header .head{
+    font-size: 30px;
+    text-transform: uppercase;
+}
+.form-part header p{
+    font-size: 14px;
+    color: var(--s-color);
+    line-height: 1.5;
+  
+}
+.form-part form{
+    position: relative;
+    width: 90% !important;
+}
+.form-part .inputs{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    width: 100%;
+    gap: 10px;
+}
+input::placeholder{
+    color:#fff;
+    font-size: 14px;
+}
+.form-part .inputs input:not([id='checkbox']){
+    width: 100%;
+    height: 42px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    outline: none;
+    margin: auto;
+    background: #615b5b;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.form-part .inputs div{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 5px;
+     
+    color: var(--s-color);
+    font-size: 14px;
+}
+
+.form-part .inputs #done{
+    font-weight: bold;
+    width: fit-content;
+    margin: auto;
+    cursor: pointer;
+    text-align: center;
+    height: 33px;
+    font-size: 15px;
+}
+
+.form-part .inputs #done:hover{
+    background: var(--s-color) ;
+
+}
+.form-part .inputs .case{
+    position: absolute;
+    right: 10px;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 14px;
+    bottom: 20%;
+    cursor: pointer;
+    border-bottom: 1px solid;
+    letter-spacing: 1px;
+     
+}
+
+.form-part .inputs .case:hover{
+    color:  #f0ac46;
+}
+
+
+.opacity0{
+    opacity: 0;
+    transition: .9s;
+}
+.message{
+    position: absolute;
+    right: 10px;
+    z-index: 3;
+    top: 45%;
+    width: 200px;
+}
+.bold{
+    border: 2px solid;
+    border-radius: 3px;
+    padding: 10px;
+    text-align: center;
+    margin: auto;
+    font-weight: bold;
+    font-size: 20px;
+    position: unset;
+    color: #00d435;
+}
+@media (max-width : 815px){
+    .form-part{
+        width: initial;
+    }
+    .contaier{
+        display: grid;
+    }
+    .bold{
+        padding: 5px;
+        color: #00d435;
+    }
+    
+}
+
